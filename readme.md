@@ -1,6 +1,35 @@
-# Craft Deploy by Bluegg
+# Craft Deploy by Bluegg - Extended to included Gulp buildtasks for awesome local Craft development experience.
 
-A framework for deploying Craft websites with Capistrano 3. 
+## Get your local development up and running fast with
+
+This is a kind of opinionated way to develop websites based on what I normally start with. It includes.
+- Bootstrap library (configured so you add only the modules you need)
+- HTML5 Boilerplate basic files and improved main Craft layout file
+- JQuery
+- JS, including includes, linting and minification build tasks
+- SASS, including sourcemaps, autoprefixing, linting and minification build tasks
+- Image minification
+- Browsersync for easy testing and auto reload
+
+## Instructions
+
+- Basically do everything as in Bluegg's instructions below for local site setup.
+- Then, the only thing you need to edit is your gulpfile.js. Find the following block...
+```
+  browserSync.init({
+    proxy: "crafttest.dev"
+  });
+```
+and simply change the domain to that of your local dev site.
+- Then run `gulp` and start developing your awesome site.
+- When ready to build minified versions for production there is a `gulp build` task.
+- Deploy to your server with Bluegg's awesome original Capistrano setup which follows. (Original Repo)[https://github.com/Bluegg/craft-deploy].
+
+- - -
+## Original instructions from Bluegg follow.
+- - -
+
+A framework for deploying Craft websites with Capistrano 3.
 
 ## Features
 
@@ -45,11 +74,11 @@ Run this (on OS X or Linux) with:
 bash install.sh
 ```
 
-Feel free to remove this file afterwards, as its no longer required. 
+Feel free to remove this file afterwards, as its no longer required.
 
 **Windows users, I have no idea how to do this, you're on your own!**
 
-### 2. Install Craft 
+### 2. Install Craft
 
 From there, you can go ahead and install Craft locally. This framework contains a basic setup for managing different Craft environments, by default it assumes 'local', 'staging' and 'live' environments. To configure your local Craft environment, you will find the config in /craft/config/local/db.php. Here, you enter your 'local' database connection strings.
 
