@@ -1,0 +1,59 @@
+linters:
+  TrailingSemicolonAfterPropertyValue:
+    enabled: true
+  StringQuotes:
+    enabled: true
+  ColorKeyword:
+    enabled: false
+  UrlQuotes:
+    enabled: true
+  UrlFormat:
+    enabled: true
+  Indentation:
+    enabled: true
+    width: 2
+  EmptyLineBetweenBlocks:
+    enabled: true
+  ZeroUnit:
+    enabled: true
+  DeclarationOrder:
+    enabled: true
+  BangFormat:
+    enabled: true
+  EmptyRule:
+    enabled: true
+  MergeableSelector:
+    enabled: true
+  NameFormat:
+    enabled: true
+  NestingDepth:
+    enabled: true
+    max_depth: 3
+  PropertyUnits:
+    enabled: true
+    properties:
+      font-size: ['rem']
+  SelectorFormat:
+    enabled: true
+    convention: hyphenated_lowercase
+  Shorthand:
+    enabled: true
+  SingleLinePerProperty:
+    enabled: true
+  SpaceAfterComma:
+    enabled: true
+  SpaceAfterPropertyName:
+    enabled: true
+  SpaceBeforeBrace:
+    enabled: true
+  TrailingSemicolon:
+    enabled: true
+  UnnecessaryParentReference:
+    enabled: true
+  VariableForProperty:
+    enabled: true
+    properties:
+      - color
+      - font
+
+

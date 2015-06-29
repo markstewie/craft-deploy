@@ -1,0 +1,8 @@
+{
+  "name": "Craft CMS Boilerplate",
+  "private": true,
+  "dependencies": {
+    "font-awesome": "~4.2.0",
+    "bootstrap-sass-official": "~3.3.5"
+  }
+}
