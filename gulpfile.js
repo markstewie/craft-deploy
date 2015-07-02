@@ -2,7 +2,6 @@
 var gulp = require('gulp'),
     gutil = require('gulp-util'),
     c = require('chalk'),
-    // del = require('del'),
     imagemin = require('gulp-imagemin'),
     concat = require('gulp-concat'),
     uglify = require('gulp-uglify'),
@@ -55,8 +54,7 @@ gulp.task('styles', ['scss-lint'], function(){
         }
       })
     )
-   // .pipe(autoprefixer('last 2 version', 'safari 5', 'ie 9', 'opera 12.1', 'ios 6', 'android 4'))
-    // .pipe(rename({ suffix: '.min' }))
+    .pipe(autoprefixer('last 2 version', 'safari 5', 'ie 9', 'opera 12.1', 'ios 6', 'android 4'))
     .pipe(sourcemaps.write())
     .pipe( gulp.dest(DIST + '/styles'))
     .pipe(browserSync.stream());
@@ -144,7 +142,7 @@ gulp.task('watch', function() {
 });
 
 // Gulp Build (compresses stuff as that's time conusming for dev)
-gulp.task('build', ['build-scripts', 'build-styles']);
+gulp.task('build', ['build-scripts', 'build-styles', 'fonts', 'image-min']);
 
 // Gulp Default Task
 gulp.task('default', ['styles', 'js-lint', 'scripts', 'fonts', 'image-min', 'watch']);
