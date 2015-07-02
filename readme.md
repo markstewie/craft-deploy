@@ -1,7 +1,5 @@
 # Craft Deploy by Bluegg - Extended to included Gulp buildtasks for awesome local Craft development experience.
 
-## Get your local development up and running fast with
-
 This is a kind of opinionated way to develop websites based on what I normally start with. It includes.
 - Bootstrap library (configured so you add only the modules you need)
 - HTML5 Boilerplate basic files and improved main Craft layout file
@@ -23,11 +21,10 @@ This is a kind of opinionated way to develop websites based on what I normally s
 and simply change the domain to that of your local dev site.
 - Then run `gulp` and start developing your awesome site.
 - When ready to build minified versions for production there is a `gulp build` task.
-- Deploy to your server with Bluegg's awesome original Capistrano setup which follows. (Original Repo)[https://github.com/Bluegg/craft-deploy].
+- Deploy to your server with Bluegg's awesome original Capistrano setup which follows. [Original Repo](https://github.com/Bluegg/craft-deploy).
 
 - - -
-## Original instructions from Bluegg follow.
-- - -
+## Original instructions from Bluegg follows.
 
 A framework for deploying Craft websites with Capistrano 3.
 
