@@ -23,6 +23,7 @@ cp craft-templates/general.php craft/config/general.php
 cp craft-templates/index.php public_html/index.php
 cp craft-templates/gitignore.txt .gitignore
 cp craft-templates/craftignore.txt .craftignore
+cp craft-templates/local.general.php craft/config/local/general.php
 
 rm -rf craft-templates
 
