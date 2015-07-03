@@ -1,13 +1,13 @@
 # Define roles, user and IP address of deployment server
-role :app, %w{[user]@[IP]}
+role :app, %w{deploy@[IP]}
 set :stage, :production
 
-server '[IP]', user: '[user]', roles: %w{app}
+server '[IP]', user: 'deploy', port:'[PORT]', roles: %w{app}
 
 set :branch, "master"
-set :deploy_to, "/var/www/domain.com/"
+set :deploy_to, "/var/www/domain.com/htdocs/"
 
-set :db_host, "[db_host]"
+set :db_host, "127.0.0.1"
 set :db_name, "[db_name]"
 set :db_user, "[db_user]"
 set :db_password, "[db_password]"
