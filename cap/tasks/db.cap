@@ -68,12 +68,12 @@ namespace :db do
 	task :pull do
 		# Create dump of remote db
 		invoke 'db:backup'
-		on roles(:app) do	
+		on roles(:app) do
 			run_locally do
 				# Create dump of current local db
-				execute "mysqldump -u #{fetch(:local_db_user)} -p#{fetch(:local_db_password)} #{fetch(:local_db_name)} > #{fetch(:local_backup_file)}"
+				execute "#{fetch(:local_ssh, '')} mysqldump -u #{fetch(:local_db_user)} -p#{fetch(:local_db_password)} #{fetch(:local_db_name)} > #{fetch(:local_backup_file)}"
 				# Import remote db into local
-				execute "mysql -u #{fetch(:local_db_user)} -p#{fetch(:local_db_password)} #{fetch(:local_db_name)} < db_backups/#{fetch(:curr_stage)}/#{fetch(:backup_filename)}.sql"
+				execute "#{fetch(:local_ssh, '')} mysql -u #{fetch(:local_db_user)} -p#{fetch(:local_db_password)} #{fetch(:local_db_name)} < db_backups/#{fetch(:curr_stage)}/#{fetch(:backup_filename)}.sql"
 			end
 		end
 		Rake::Task['db:cleanup_local'].execute
@@ -86,7 +86,7 @@ namespace :db do
 		on roles(:app) do
 			# Create dump of local db
 			run_locally do
-				execute "mysqldump -u #{fetch(:local_db_user)} -p#{fetch(:local_db_password)} #{fetch(:local_db_name)} > #{fetch(:local_backup_file)}"
+				execute "#{fetch(:local_ssh, '')} mysqldump -u #{fetch(:local_db_user)} -p#{fetch(:local_db_password)} #{fetch(:local_db_name)} > #{fetch(:local_backup_file)}"
 			end
 
 			local_uploaded_file = "#{fetch(:deploy_to)}db_backups/local-#{fetch(:backup_filename)}.sql"

@@ -114,12 +114,6 @@ gulp.task('fonts', function() {
   .pipe(gulp.dest(DIST + '/fonts'));
 });
 
-// Clean dist directory for rebuild
-// gulp.task('clean', function() {
-//   del([
-//     DIST + '/**/*'
-//   ])
-// });
 
 // Watch
 gulp.task('watch', function() {
@@ -137,7 +131,6 @@ gulp.task('watch', function() {
 
   // watch images, js & html
   gulp.watch( [DIST + '/images/**/*', DIST + '/js/*.js', TEMPLATES + '/**/*.html']).on('change', browserSync.reload);
-
 
 });
 

@@ -1,11 +1,11 @@
-/* =======
- MAIN SCSS FILE... SHOULDN'T NEED TO DO MUCH HERE
-======== */
+// =======
+// MAIN SCSS FILE... SHOULDN'T NEED TO DO MUCH HERE
+// =======
 
 // Boostrap base. Edit only the stuff you need in this file
 //
-@import "vendor/bootstrap/bootstrap";
+@import 'vendor/bootstrap/bootstrap';
 
 // Site stuff only
 //
-@import "site/site";
+@import 'site/site';
