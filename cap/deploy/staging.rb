@@ -5,7 +5,7 @@ set :stage, :staging
 server '[IP]', user: 'deploy', roles: %w{app}
 
 set :branch, "master"
-set :deploy_to, "/var/www/staging.domain.com/htdocs/"
+set :deploy_to, "/var/www/staging.[domain.com]/htdocs/"
 
 set :log_level, :debug
 

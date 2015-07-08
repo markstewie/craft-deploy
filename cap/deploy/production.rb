@@ -5,7 +5,7 @@ set :stage, :production
 server '[IP]', user: 'deploy', roles: %w{app}
 
 set :branch, "master"
-set :deploy_to, "/var/www/domain.com/htdocs/"
+set :deploy_to, "/var/www/[domain.com]/htdocs/"
 
 set :db_host, "127.0.0.1"
 set :db_name, "[db_name]"

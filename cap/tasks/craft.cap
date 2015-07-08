@@ -27,8 +27,8 @@ namespace :craft do
 	task :sync_assets do
 		run_locally do
 			roles(:all).each do |role|
-				execute :rsync, "-vzO root@#{role.hostname}:#{shared_path}/assets/ public_html/assets"
-				execute :rsync, "-vzO public_html/assets/ root@#{role.hostname}:#{shared_path}/assets"
+        execute :rsync, "-avzO #{role.user}@#{role.hostname}:#{shared_path}/assets/ public_html/assets"
+        execute :rsync, "-avzO public_html/assets/ #{role.user}@#{role.hostname}:#{shared_path}/assets"
 			end
 		end
 	end

@@ -20,7 +20,7 @@ var gulp = require('gulp'),
 
 // Directories
 var SRC = 'public_html/src',
-    DIST = 'public_html/assets',
+    DIST = 'public_html/dist',
     TEMPLATES = 'templates';
 
 
