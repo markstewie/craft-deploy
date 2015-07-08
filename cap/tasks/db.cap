@@ -71,6 +71,7 @@ namespace :db do
 		on roles(:app) do
 			run_locally do
 				# Create dump of current local db
+
 				execute "#{fetch(:local_ssh, '')} mysqldump -u #{fetch(:local_db_user)} -p#{fetch(:local_db_password)} #{fetch(:local_db_name)} > #{fetch(:local_backup_file)}"
 				# Import remote db into local
 				execute "#{fetch(:local_ssh, '')} mysql -u #{fetch(:local_db_user)} -p#{fetch(:local_db_password)} #{fetch(:local_db_name)} < db_backups/#{fetch(:curr_stage)}/#{fetch(:backup_filename)}.sql"
