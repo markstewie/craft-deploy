@@ -20,6 +20,9 @@ set :local_db_name, "[db_name]"
 set :local_db_user, "[db_user]"
 set :local_db_password, "[db_password]"
 
+# Uncomment if you're using homestead
+# set :local_ssh, "ssh vagrant@192.168.10.10"
+
 ############################################
 # Setup Capistrano
 ############################################
