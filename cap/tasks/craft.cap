@@ -20,6 +20,9 @@ namespace :craft do
 			execute "rm #{fetch(:deploy_to)}latest.zip"
 			execute "mv #{fetch(:deploy_to)}craft-zip/craft/app #{shared_path}/craft/app"
 			execute "rm -R #{fetch(:deploy_to)}craft-zip"
+      execute "chmod -R 774 #{fetch(:deploy_to)}shared/craft/storage"
+      execute "chmod -R 774 #{fetch(:deploy_to)}shared/craft/app"
+      execute "chmod -R 774 #{fetch(:deploy_to)}shared/assets"
 		end
 	end
 

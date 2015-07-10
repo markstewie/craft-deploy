@@ -36,7 +36,6 @@ mkdir db_backups/production
 rm public_html/htaccess
 rm public_html/web.config
 
-cp build-templates/.htaccess public_html/.htaccess
 cp build-templates/apple-touch-icon.png public_html/apple-touch-icon.png
 cp build-templates/browserconfig.xml public_html/browserconfig.xml
 cp build-templates/crossdomain.xml public_html/crossdomain.xml
