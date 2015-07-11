@@ -64,7 +64,7 @@ gulp.task("build-styles", function(){
   gulp.src( DIST + '/styles/main.css')
     .pipe(rename('main.min.css'))
     .pipe(minifycss())
-    .pipe(gulp.dest(DIST + '/styles'));
+    .pipe(gulp.dest(DIST + '/styles'))
     .pipe(notify('CSS Build Compiled!'));
 });
 

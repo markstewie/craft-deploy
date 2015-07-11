@@ -49,7 +49,7 @@ task :gulp_build do
     execute "gulp build"
     execute "git add ."
     execute "git commit -m 'Gulp build production assets'"
-    execute "git push"
+    execute "git push origin #{fetch(:branch)}"
   end
 end
 
