@@ -27,6 +27,10 @@ $customConfig = array(
 		// within the Craft Control Panel. For example:
 		//    siteUrl   can be references as {siteUrl}
 		//    basePath  can be references as {basePath}
+    // As an example... when setting up Asset sources,
+    // File System Path could look like "{basePath}public_html/assets/images/products/"
+    // URL Path could look like "{siteUrl}assets/images/products/"
+    // And in main general settings you can define Site Url as simply "{siteUrl}"
 		'environmentVariables' => array(
 			'basePath' => BASEPATH,
 			'siteUrl'  => SITE_URL

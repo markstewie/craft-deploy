@@ -15,10 +15,10 @@ set :git_strategy, SubmoduleStrategy
 # Local db details
 ############################################
 
-set :local_db_host, "[db_host]"
+set :local_db_host, "127.0.0.1"
 set :local_db_name, "[db_name]"
-set :local_db_user, "[db_user]"
-set :local_db_password, "[db_password]"
+set :local_db_user, "homestead"
+set :local_db_password, "secret"
 
 # Uncomment if you're using homestead
 # set :local_ssh, "ssh vagrant@192.168.10.10"
