@@ -61,9 +61,11 @@ gulp.task('styles', ['scss-lint'], function(){
 });
 
 gulp.task("build-styles", function(){
-  gulp.src( DIST + '/styles/main.min.css')
+  gulp.src( DIST + '/styles/main.css')
+    .pipe(rename('main.min.css'))
     .pipe(minifycss())
     .pipe(gulp.dest(DIST + '/styles'));
+    .pipe(notify('CSS Build Compiled!'));
 });
 
 
@@ -92,7 +94,7 @@ gulp.task("scripts", function() {
 });
 
 gulp.task("build-scripts", function(){
-	gulp.src(DIST + '/js/main.js')
+  gulp.src(DIST + '/js/main.js')
     .pipe(rename('main.min.js'))
     .pipe(uglify())
     .pipe(gulp.dest(DIST + '/js'))
@@ -119,7 +121,7 @@ gulp.task('fonts', function() {
 gulp.task('watch', function() {
 
   browserSync.init({
-    proxy: "crafttest.dev"
+    proxy: "subtract.dev"
   });
 
   // Watch .scss files

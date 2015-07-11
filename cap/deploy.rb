@@ -40,6 +40,22 @@ set :keep_releases, 3
 set :keep_db_backups, 3
 
 ############################################
+# Run gulp build tasks so we have minified files
+############################################
+
+desc "run gulp build tasks"
+task :gulp_build do
+  run_locally do
+    execute "gulp build"
+    execute "git add ."
+    execute "git commit -m 'Gulp build production assets'"
+    execute "git push"
+  end
+end
+
+before "deploy", :gulp_build
+
+############################################
 # Linked files and directories (symlinks)
 ############################################
 
